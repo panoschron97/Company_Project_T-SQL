@@ -2043,9 +2043,13 @@ EXECUTE [Indexes].[SelectionStatementsCursor] 3, 6;
 ------------------------------
 USE [Company_Project_T_SQL];
 GO
+BEGIN TRANSACTION
 DELETE [Companies].[Companies] FROM [Companies].[Companies];
+COMMIT TRANSACTION
 GO
+BEGIN TRANSACTION
 DELETE [Companies].[CompaniesLog] FROM [Companies].[CompaniesLog];
+COMMIT TRANSACTION
 GO
 ALTER TABLE [Locations].[Locations] DROP CONSTRAINT IF EXISTS [CompanyID_FK];
 GO
@@ -2055,9 +2059,13 @@ TRUNCATE TABLE [Companies].[CompaniesLog];
 ------------------------------
 USE [Company_Project_T_SQL];
 GO
+BEGIN TRANSACTION
 DELETE [Locations].[Locations] FROM [Locations].[Locations];
+COMMIT TRANSACTION
 GO
+BEGIN TRANSACTION
 DELETE [Locations].[LocationsLog] FROM [Locations].[LocationsLog];
+COMMIT TRANSACTION
 GO
 ALTER TABLE [Departments].[Departments] DROP CONSTRAINT IF EXISTS [LocationID_FK];
 GO
@@ -2067,9 +2075,13 @@ TRUNCATE TABLE [Locations].[LocationsLog];
 ------------------------------
 USE [Company_Project_T_SQL];
 GO
+BEGIN TRANSACTION
 DELETE [Departments].[Departments] FROM [Departments].[Departments];
+COMMIT TRANSACTION
 GO
+BEGIN TRANSACTION
 DELETE [Departments].[DepartmentsLog] FROM [Departments].[DepartmentsLog];
+COMMIT TRANSACTION
 GO
 ALTER TABLE [Employees].[Employees] DROP CONSTRAINT IF EXISTS [DepartmentID_FK];
 GO
@@ -2079,11 +2091,15 @@ TRUNCATE TABLE [Departments].[DepartmentsLog];
 ------------------------------
 USE [Company_Project_T_SQL];
 GO
+BEGIN TRANSACTION
 DELETE [Projects].[Projects] FROM [Projects].[Projects];
+COMMIT TRANSACTION
 GO
 ALTER TABLE [Employees].[Employees] DROP CONSTRAINT IF EXISTS [ProjectID_FK];
 GO
+BEGIN TRANSACTION
 DELETE [Projects].[ProjectsLog] FROM [Projects].[ProjectsLog];
+COMMIT TRANSACTION
 GO
 TRUNCATE TABLE [Projects].[Projects];
 GO
@@ -2091,9 +2107,13 @@ TRUNCATE TABLE [Projects].[ProjectsLog];
 ------------------------------
 USE [Company_Project_T_SQL];
 GO
+BEGIN TRANSACTION
 DELETE [Employees].[Employees] FROM [Employees].[Employees];
+COMMIT TRANSACTION
 GO
+BEGIN TRANSACTION
 DELETE [Employees].[EmployeesLog] FROM [Employees].[EmployeesLog];
+COMMIT TRANSACTION
 GO
 TRUNCATE TABLE [Employees].[Employees];
 GO
