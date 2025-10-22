@@ -37,7 +37,7 @@ This repository contains a T-SQL script for creating and managing a database rel
 
 2.  Open the `Company_Project_T-SQL.sql` file.
 
-3.  Execute the script. It will create the necessary databases, schemas, tables, procedures, and triggers.
+3.  Execute the script. It will create the necessary databases, schemas, tables, procedures and triggers.
 
 Example of executing a stored procedure:
 
