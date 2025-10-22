@@ -25,6 +25,7 @@ This repository contains a T-SQL script for creating and managing a database rel
 
     ```bash
     git clone https://github.com/panoschron97/Company_Project_T-SQL.git
+    cd Company_Project_T-SQL
     ```
 
 2.  Open the `Company_Project_T-SQL.sql` file in your SQL Server Management Studio (SSMS).
