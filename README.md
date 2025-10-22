@@ -1,4 +1,4 @@
-# Company_Project_T-SQL
+# Company Project T-SQL
 
 This repository contains a T-SQL script for creating and managing a database related to company projects including schemas for users, companies, locations, departments, projects and employees. It includes procedures for creating tables, managing user roles and permissions and implementing data manipulation logic through triggers.
 
